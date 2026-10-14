@@ -32,3 +32,7 @@ print("cds2:\n", cds)
 # selecting intervals
 reg = cds.loci['CAJFCJ010000097.1', '+', 50000:55000]
 print(reg)
+
+# code below derives the first codon of each CDS group; grouping is defined by their ID:
+first = cds.slice_ranges(start=0, end=3, group_by='ID')
+print("first codons:\n", first)
