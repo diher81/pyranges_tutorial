@@ -36,3 +36,9 @@ print(reg)
 # code below derives the first codon of each CDS group; grouping is defined by their ID:
 first = cds.slice_ranges(start=0, end=3, group_by='ID')
 print("first codons:\n", first)
+
+print("cds head:\n", cds.head())
+
+# find promotor
+g = cds.extend_ranges(ext_5=300, group_by='ID')
+print(g.head())
